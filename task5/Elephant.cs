@@ -10,7 +10,6 @@ namespace task5
     {
         public string Name;
         public int EarSize;
-
         public void WhoAmI()
         {
             Console.WriteLine("Calling " + Name + ".WhoAmI()");

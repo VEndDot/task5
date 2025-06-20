@@ -8,13 +8,8 @@
 
             string userInput = ""; 
 
-            Elephant lloyd = new Elephant();
-            lloyd.Name = "Lloyd";
-            lloyd.EarSize = 40;
-
-            Elephant lucinda = new Elephant();
-            lucinda.Name = "Lucinda";
-            lucinda.EarSize = 33;
+            Elephant lloyd = new Elephant() { Name = "Lloyd", EarSize = 40 };
+            Elephant lucinda = new Elephant() { Name = "Lucinda", EarSize = 33 };
 
             while (userInput != "0")
             {
@@ -30,17 +25,21 @@
                         lucinda.WhoAmI();
                         break;
                     case "3":
-                        Console.WriteLine("References have been swapped");
-                        Elephant tmpLloyd = lloyd;
-
-                        lloyd = lucinda;
-                        lucinda = tmpLloyd;
+                        SwapElephant(ref lloyd, ref lucinda);
                         break;
                 }
             }
             
 
 
+        }
+
+        public static void SwapElephant(ref Elephant object_1,ref Elephant object_2) { 
+            Console.WriteLine("References have been swapped");
+            Elephant tmpLloyd = object_1;
+
+            object_1 = object_2;
+            object_2 = tmpLloyd;
         }
     }
 }

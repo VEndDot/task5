@@ -36,10 +36,10 @@
 
         public static void SwapElephant(ref Elephant object_1,ref Elephant object_2) { 
             Console.WriteLine("References have been swapped");
-            Elephant tmpLloyd = object_1;
+            Elephant tmpObject = object_1;
 
             object_1 = object_2;
-            object_2 = tmpLloyd;
+            object_2 = tmpObject;
         }
     }
 }
